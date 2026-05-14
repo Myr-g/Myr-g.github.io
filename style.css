@@ -1,4 +1,4 @@
-/* ====== GLOBAL ====== */
+/* ==== GLOBAL ==== */
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
 
@@ -10,9 +10,24 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
   position: relative;
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* CRT + grain overlay */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('assets/moody_street_view_aibek_skakov.jpg') center/cover no-repeat;
+  filter: brightness(0.35) contrast(1.1) saturate(0.7) blur(1.25px);
+  z-index: -2;
+}
+
+/* CRT & Grain Overlay */
 .overlay {
   pointer-events: none;
   position: fixed;
@@ -24,26 +39,54 @@ body {
   mix-blend-mode: screen;
 }
 
-/* ====== NAV ====== */
+/* ==== NAV ==== */
 
 nav {
-  padding: 20px;
+  padding: 25px 0;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 nav a {
-  margin: 0 15px;
-  color: #c8b7ff; /* ghost lavender */
-  text-decoration: none;
-  font-weight: 400;
-  transition: 0.2s;
+  position: relative;
+  margin: 0px 9px;
 }
 
-nav a:hover {
-  text-shadow: 0 0 6px #c8b7ff;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background: #c8b7ff;
+  transition: width 0.25s ease;
 }
 
-/* ====== TITLES ====== */
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* ==== STATUS BAR ==== */
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  color: #c8b7ffaa;
+  background: #0d0d0fdd;
+  border-top: 1px solid #c8b7ff33;
+  backdrop-filter: blur(2px);
+  letter-spacing: 0.5px;
+  text-align: center;
+  pointer-events: none;
+}
+
+
+/* ==== TITLES ==== */
 
 .title {
   font-size: 3rem;
@@ -64,7 +107,13 @@ nav a:hover {
   color: #c8b7ff;
 }
 
-/* ====== LANDING ====== */
+/* ==== LANDING ==== */
+
+main {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
 .intro {
   text-align: center;
@@ -92,7 +141,16 @@ nav a:hover {
   text-shadow: 0 0 6px #c8b7ff;
 }
 
-/* ====== PROJECTS ====== */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, transparent 60%, #000 100%);
+  opacity: 0.25;
+}
+
+/* ==== PROJECTS ==== */
 
 .project-grid {
   max-width: 800px;
@@ -117,7 +175,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* ====== ABOUT ====== */
+/* ==== ABOUT ==== */
 
 .about-section {
   max-width: 700px;
@@ -134,4 +192,13 @@ nav a:hover {
 .experience-list {
   max-width: 700px;
   margin: 20px auto;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid #c8b7ff;
 }
