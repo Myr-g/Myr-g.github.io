@@ -50,6 +50,7 @@ nav {
 nav a {
   position: relative;
   margin: 0px 9px;
+  color: #0000EE;
 }
 
 nav a::after {
