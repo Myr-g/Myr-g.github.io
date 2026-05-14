@@ -50,7 +50,14 @@ nav {
 nav a {
   position: relative;
   margin: 0px 9px;
-  color: #0000EE;
+}
+
+nav a:hover {
+  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
+}
+
+nav a:visited {
+    color: #0000EE;
 }
 
 nav a::after {
