@@ -93,6 +93,18 @@ nav a:hover::after {
   pointer-events: none;
 }
 
+.status {
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+  0%   { opacity: 0.65; text-shadow: 0 0 4px #c8b7ff55; }
+  50%  { opacity: 1;    text-shadow: 0 0 8px #c8b7ffcc; }
+  100% { opacity: 0.65; text-shadow: 0 0 4px #c8b7ff55; }
+}
+
+
 
 /* ==== TITLES ==== */
 
@@ -183,6 +195,42 @@ body::after {
   text-decoration: none;
 }
 
+.read-more {
+  color: #c8b7ff;
+  cursor: pointer;
+  font-family: monospace;
+  margin-top: 10px;
+}
+
+.read-more:hover {
+  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
+}
+
+.details.hidden {
+  display: none;
+}
+
+.details {
+  margin-top: 15px;
+  border-left: 1px solid #c8b7ff44;
+  padding-left: 12px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.details p {
+  font-size: 0.85rem;
+}
+
+.subheader {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #c8b7ff;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* ==== ABOUT ==== */
 
 .about-section {
@@ -209,4 +257,5 @@ a {
 
 a:hover {
   border-bottom: 1px solid #c8b7ff;
+  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
 }
