@@ -174,10 +174,6 @@ main {
   transition: 0.2s;
 }
 
-a.btn, a.btn:visited, a.btn:active {
-  color: #c8b7ff;
-}
-
 .btn:hover {
   background: #c8b7ff22;
   text-shadow: 0 0 6px #c8b7ff;
@@ -258,10 +254,10 @@ a:hover {
   text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
 }
 
-a:visited {
+a:visited:not(.btn) {
   color: #0000EE;
 }
 
-a:active {
+a:active:not(.btn) {
   color: red;
 }
