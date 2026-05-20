@@ -52,6 +52,20 @@ body::before {
   background: #c8b7ff10;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid #c8b7ff;
+  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
+}
+
+a:active {
+  color: red;
+}
+
 /* ==== NAV ==== */
 
 nav {
@@ -73,11 +87,6 @@ nav a:visited {
   color: #0000EE;
 }
 
-nav a:active {
-  color: red;
-}
-
-
 nav a::after {
   content: "";
   position: absolute;
@@ -92,7 +101,6 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
-
 
 /* ==== STATUS BAR ==== */
 .status-bar {
@@ -115,14 +123,11 @@ nav a:hover::after {
   animation: pulse 2.4s ease-in-out infinite;
 }
 
-
 @keyframes pulse {
   0%   { opacity: 0.65; text-shadow: 0 0 4px #c8b7ff55; }
   50%  { opacity: 1;    text-shadow: 0 0 8px #c8b7ffcc; }
   100% { opacity: 0.65; text-shadow: 0 0 4px #c8b7ff55; }
 }
-
-
 
 /* ==== TITLES ==== */
 
@@ -179,6 +184,10 @@ main {
   text-shadow: 0 0 6px #c8b7ff;
 }
 
+.btn:visited {
+  color: #c8b7ff;
+}
+
 body::after {
   content: "";
   position: fixed;
@@ -198,6 +207,10 @@ body::after {
 .project-link {
   color: #c8b7ff;
   text-decoration: none;
+}
+
+.project-link:visited {
+  color: #c8b7ff;
 }
 
 .read-more {
@@ -244,20 +257,6 @@ body::after {
   color: #c8b7ff;
 }
 
-a {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-a:hover {
-  border-bottom: 1px solid #c8b7ff;
-  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
-}
-
-a:visited:not(.btn):not(.project-link) {
+.contact-link:visited {
   color: #0000EE;
-}
-
-a:active:not(.btn) {
-  color: red;
 }
