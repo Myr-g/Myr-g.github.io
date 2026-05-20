@@ -200,6 +200,14 @@ body::after {
   text-decoration: none;
 }
 
+.project-link:visited {
+  color: #c8b7ff;
+}
+
+.project-link:active {
+  color: red;
+}
+
 .read-more {
   color: #c8b7ff;
   cursor: pointer;
