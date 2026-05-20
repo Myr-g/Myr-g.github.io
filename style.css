@@ -200,14 +200,6 @@ body::after {
   text-decoration: none;
 }
 
-.project-link:visited {
-  color: #c8b7ff;
-}
-
-.project-link:active {
-  color: red;
-}
-
 .read-more {
   color: #c8b7ff;
   cursor: pointer;
@@ -262,7 +254,7 @@ a:hover {
   text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
 }
 
-a:visited:not(.btn) {
+a:visited:not(.btn):not(.project-link) {
   color: #0000EE;
 }
 
