@@ -52,20 +52,6 @@ body::before {
   background: #c8b7ff10;
 }
 
-a {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-a:hover {
-  border-bottom: 1px solid #c8b7ff;
-  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
-}
-
-a:active {
-  color: red;
-}
-
 /* ==== NAV ==== */
 
 nav {
@@ -259,4 +245,18 @@ body::after {
 
 .contact-link:visited {
   color: #0000EE;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid #c8b7ff;
+  text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
+}
+
+a:active {
+  color: red;
 }
