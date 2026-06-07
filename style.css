@@ -73,6 +73,10 @@ nav a:visited {
   color: #0000EE;
 }
 
+nav a:active {
+  color: red;
+}
+
 nav a::after {
   content: "";
   position: absolute;
@@ -174,6 +178,10 @@ main {
   color: #c8b7ff;
 }
 
+.btn:active {
+  color: red;
+}
+
 body::after {
   content: "";
   position: fixed;
@@ -197,6 +205,10 @@ body::after {
 
 .project-link:visited {
   color: #c8b7ff;
+}
+
+.project-link:active {
+  color: red;
 }
 
 .read-more {
@@ -247,6 +259,10 @@ body::after {
   color: #0000EE;
 }
 
+.contact-link:active {
+  color: red;
+}
+
 a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -255,8 +271,4 @@ a {
 a:hover {
   border-bottom: 1px solid #c8b7ff;
   text-shadow: 0 0 6px #c8b7ff, 0 0 12px #c8b7ff;
-}
-
-a:active {
-  color: red;
 }
