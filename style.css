@@ -233,7 +233,7 @@ body::after {
   animation: fadeIn 0.2s ease-out;
 }
 
-.details p {
+.details p, li {
   font-size: 0.85rem;
 }
 
