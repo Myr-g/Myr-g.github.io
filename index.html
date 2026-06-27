@@ -17,22 +17,68 @@
   </nav>
 
   <main>
-    <div class="terminal-card">
-    <h1 class="title">Hey, I'm Christopher</h1>
-    <p class="subtitle">developer • game designer • systems tinkerer</p>
+    <div class="terminal-card home">
+      <h1 class="title">Hey, I'm Christopher</h1>
+      <p class="subtitle">Developer • Game Designer • Creative Arts</p>
 
-    <p class="intro">
-      initializing portfolio…<br>
-      loading personal data…<br>
-      connection established.
-    </p>
+      <p id="intro" class="intro"></p>
 
-    <div class="buttons">
-      <a class="btn" href="projects.html">view /projects</a>
-      <a class="btn" href="about.html">view about.txt</a>
-    </div>
+      <div class="buttons">
+        <a class="btn" href="projects.html">/projects</a>
+        <a class="btn" href="about.html">/about.txt</a>
+      </div>
     </div>
   </main>
+
+  <script>
+    const lines = [
+      "initializing portfolio...",
+      "loading personal data...",
+      "connection established."
+    ];
+
+    const intro = document.getElementById("intro");
+
+    let lineIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function terminalWrite() {
+      const current = lines[lineIndex];
+
+      if(!deleting)
+      {
+        intro.textContent = current.slice(0, charIndex++);
+
+        if(charIndex > current.length)
+        {
+          if(lineIndex === lines.length - 1)
+          {
+            return; 
+          }
+
+          deleting = true;
+          setTimeout(terminalWrite, 1000);
+          return;
+        }
+      } 
+    
+      else
+      {
+        intro.textContent = current.slice(0, charIndex--);
+
+        if(charIndex === 0)
+        {
+          deleting = false;
+          lineIndex++;
+        }
+      }
+
+      setTimeout(terminalWrite, deleting ? 30 : 50);
+    }
+
+    terminalWrite();
+  </script>
 </body>
 
 <footer class="status-bar">

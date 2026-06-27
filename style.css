@@ -10,7 +10,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
   position: relative;
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.3s ease-out;
 }
 
 @keyframes fadeIn {
@@ -22,8 +22,8 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('assets/moody_street_view_aibek_skakov.jpg') center/cover no-repeat;
-  filter: brightness(0.35) contrast(1.1) saturate(0.7) blur(1.25px);
+  background: url('assets/milk2_bedroom.jpg') center/cover no-repeat;
+  filter: brightness(0.85) contrast(1.1) saturate(0.7) blur(1.5px);
   z-index: -2;
 }
 
@@ -55,9 +55,17 @@ body::before {
 /* ==== NAV ==== */
 
 nav {
-  padding: 25px 0;
+  position: fixed;
+  padding: 20px 0;
   text-align: center;
   letter-spacing: 0.5px;
+
+  top: 0;
+  width: 100%;
+  color: #c8b7ffaa;
+  background: #0d0d0fdd;
+  border-bottom: 1px solid #c8b7ff33;
+  backdrop-filter: blur(2px);
 }
 
 nav a {
@@ -148,10 +156,32 @@ main {
   padding: 40px 20px;
 }
 
+.terminal-card.home {
+  margin-top: 5rem;
+}
+
 .intro {
-  text-align: center;
-  margin-top: 40px;
-  opacity: 0.9;
+  display: block;
+  width: fit-content;
+  height: 1.4em; 
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  line-height: 1.4em;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+
+  color: #eaeaea;
+  border-right: 2px solid #eaeaea;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 .buttons {
