@@ -285,8 +285,13 @@ body::after {
   color: #c8b7ff;
 }
 
+.contact-link {
+  color: #c8b7ff;
+  text-decoration: none;
+}
+
 .contact-link:visited {
-  color: #0000EE;
+  color: #c8b7ff;
 }
 
 .contact-link:active {
